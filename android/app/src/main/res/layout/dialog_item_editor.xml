@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:paddingStart="@dimen/space_xl"
+    android:paddingTop="@dimen/space_xl"
+    android:paddingEnd="@dimen/space_xl"
+    android:paddingBottom="@dimen/space_l">
+
+    <TextView
+        android:id="@+id/editorTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/dialog_item_new"
+        android:textAppearance="@style/TextAppearance.App.Title" />
+
+    <View
+        android:id="@+id/editorRule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hairline"
+        android:layout_below="@id/editorTitle"
+        android:layout_marginTop="@dimen/space_m"
+        android:background="@drawable/divider_rule" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/editorScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editorRule"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginBottom="@dimen/space_m"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEditorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/field_title"
+                app:counterEnabled="true"
+                app:counterMaxLength="48"
+                style="@style/Widget.App.TextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEditorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.App.Body" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelEditorCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:text="@string/field_category"
+                android:textAppearance="@style/TextAppearance.App.Overline" />
+
+            <com.tinyarchive.app.core.ui.CategoryChipGroupView
+                android:id="@+id/chipsEditorCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s" />
+
+            <TextView
+                android:id="@+id/txtEditorCategoryError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/error_category_missing"
+                android:textAppearance="@style/TextAppearance.App.Meta"
+                android:textColor="@color/clay_danger"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEditorReference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:hint="@string/field_reference"
+                style="@style/Widget.App.TextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEditorReference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.App.Body" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEditorLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:hint="@string/field_location"
+                style="@style/Widget.App.TextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEditorLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.App.Body" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEditorNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:hint="@string/field_note"
+                app:counterEnabled="true"
+                app:counterMaxLength="240"
+                style="@style/Widget.App.TextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEditorNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="4"
+                    android:textAppearance="@style/TextAppearance.App.Body" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/editorActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editorScroll"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditorDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_min"
+            android:text="@string/action_delete"
+            android:visibility="gone"
+            style="@style/Widget.App.Button.Danger" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditorCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_min"
+            android:layout_marginStart="@dimen/space_s"
+            android:text="@string/action_cancel"
+            style="@style/Widget.App.Button.Quiet" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditorSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_min"
+            android:layout_marginStart="@dimen/space_s"
+            android:minWidth="96dp"
+            android:text="@string/action_save"
+            style="@style/Widget.App.Button.Primary" />
+
+    </LinearLayout>
+
+</RelativeLayout>

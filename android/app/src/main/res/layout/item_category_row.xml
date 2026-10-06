@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/categoryRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/touch_min"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/space_s"
+    android:paddingBottom="@dimen/space_s">
+
+    <View
+        android:id="@+id/categorySwatch"
+        android:layout_width="@dimen/icon_small"
+        android:layout_height="@dimen/icon_small"
+        android:background="@drawable/bg_swatch" />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textColor="@color/ink_primary" />
+
+    <TextView
+        android:id="@+id/categoryCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_s"
+        android:textAppearance="@style/TextAppearance.App.Meta" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/categoryEdit"
+        android:layout_width="@dimen/touch_min"
+        android:layout_height="@dimen/touch_min"
+        android:layout_marginStart="@dimen/space_s"
+        android:contentDescription="@string/cd_edit_category"
+        app:icon="@drawable/ic_pencil"
+        style="@style/Widget.App.Button.IconOnly" />
+
+</LinearLayout>

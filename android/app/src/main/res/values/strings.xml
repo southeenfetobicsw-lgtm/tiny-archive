@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tiny Archive</string>
+
+    <string name="splash_title">TINY ARCHIVE</string>
+    <string name="splash_subtitle">A QUIET CATALOG FOR SMALL COLLECTIONS</string>
+    <string name="splash_loading">LOADING ARCHIVE</string>
+    <string name="splash_phase_index">READING THE INDEX</string>
+    <string name="splash_phase_drawers">OPENING THE DRAWERS</string>
+    <string name="splash_phase_ready">ARCHIVE READY</string>
+    <string name="splash_footer">OFFLINE . LOCAL . YOURS</string>
+
+    <string name="menu_overline">PERSONAL CATALOG . EST. 2026</string>
+    <string name="menu_hero_top">TINY</string>
+    <string name="menu_hero_bottom">ARCHIVE</string>
+    <string name="menu_tagline">Record it once. Find it in two letters.</string>
+    <string name="menu_cta">START ARCHIVE</string>
+    <string name="menu_categories">CATEGORIES</string>
+    <string name="menu_settings">SETTINGS</string>
+
+    <string name="game_title">ARCHIVE</string>
+    <string name="game_overline">FILED RECORDS</string>
+    <string name="game_section_title">Browse the drawers</string>
+    <string name="search_hint">Search titles, notes, categories</string>
+    <string name="chip_all">ALL</string>
+    <string name="game_cta">START REVIEW</string>
+    <string name="game_categories">CATEGORIES</string>
+    <string name="empty_title">NOTHING FILED YET</string>
+    <string name="empty_body">Tap the plus in the header to write your first record.</string>
+    <string name="empty_action">ADD FIRST ITEM</string>
+    <string name="no_match_title">NO MATCHES</string>
+    <string name="no_match_body">Try a shorter word, or clear the filter.</string>
+    <string name="no_match_action">CLEAR FILTER</string>
+    <string name="error_title">ARCHIVE COULD NOT BE READ</string>
+    <string name="error_body">The stored records are unreadable. Restoring the sample drawer keeps the app usable.</string>
+    <string name="error_action">RESTORE SAMPLES</string>
+
+    <string name="summary_overline">SESSION COMPLETE</string>
+    <string name="summary_title">ARCHIVE SUMMARY</string>
+    <string name="summary_recent">RECENTLY TOUCHED</string>
+    <string name="summary_recent_title">The last drawers you opened</string>
+    <string name="summary_quiet">A quiet session. Nothing changed.</string>
+    <string name="summary_cta">BROWSE AGAIN</string>
+    <string name="summary_menu">MENU</string>
+
+    <string name="stat_items">ITEMS</string>
+    <string name="stat_categories">CATEGORIES</string>
+    <string name="stat_notes">NOTES</string>
+    <string name="stat_showing">SHOWING</string>
+    <string name="stat_total">TOTAL</string>
+    <string name="stat_with_notes">WITH NOTES</string>
+    <string name="stat_items_filed">ITEMS FILED</string>
+    <string name="stat_categories_used">CATEGORIES USED</string>
+    <string name="stat_notes_written">NOTES WRITTEN</string>
+    <string name="stat_minutes">MINUTES SPENT</string>
+
+    <string name="dialog_item_new">NEW RECORD</string>
+    <string name="dialog_item_edit">EDIT RECORD</string>
+    <string name="field_title">TITLE</string>
+    <string name="field_category">CATEGORY</string>
+    <string name="field_reference">YEAR OR REFERENCE</string>
+    <string name="field_location">LOCATION</string>
+    <string name="field_note">NOTE</string>
+    <string name="error_title_blank">Give the record a title</string>
+    <string name="error_category_missing">Choose a category</string>
+    <string name="action_save">SAVE</string>
+    <string name="action_cancel">CANCEL</string>
+    <string name="action_delete">DELETE</string>
+    <string name="action_delete_confirm">TAP TO CONFIRM DELETE</string>
+
+    <string name="dialog_categories">CATEGORIES</string>
+    <string name="dialog_categories_hint">Rename a drawer or open a new one</string>
+    <string name="category_add_hint">New category name</string>
+    <string name="action_add">ADD</string>
+    <string name="error_category_blank">Name the category</string>
+    <string name="error_category_duplicate">That category already exists</string>
+    <string name="error_category_in_use">Empty the category before removing it</string>
+    <string name="action_done">DONE</string>
+
+    <string name="dialog_settings">SETTINGS</string>
+    <string name="settings_sort">SORT ORDER</string>
+    <string name="sort_newest">NEWEST</string>
+    <string name="sort_title">TITLE A-Z</string>
+    <string name="sort_category">CATEGORY</string>
+    <string name="settings_note_preview">SHOW NOTE PREVIEW</string>
+    <string name="settings_compact">COMPACT ROWS</string>
+    <string name="settings_reset">RESET ARCHIVE</string>
+    <string name="settings_reset_confirm">TAP TO CONFIRM RESET</string>
+
+    <string name="count_format">%1$d ITEMS . %2$d CATEGORIES</string>
+    <string name="meta_format">%1$s . %2$s . %3$s</string>
+    <string name="meta_format_short">%1$s . %2$s</string>
+    <string name="category_count_format">%1$d filed</string>
+    <string name="counter_format">%1$d / %2$d</string>
+
+    <string name="cd_loading">Loading the archive</string>
+    <string name="cd_splash_art">Card catalog drawer</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_add_item">Add a record</string>
+    <string name="cd_item_sprite">Record category</string>
+    <string name="cd_edit_category">Rename category</string>
+    <string name="cd_clear_search">Clear the search</string>
+
+    <string name="state_on">on</string>
+    <string name="state_off">off</string>
+    <string name="state_selected">selected</string>
+    <string name="state_not_selected">not selected</string>
+</resources>

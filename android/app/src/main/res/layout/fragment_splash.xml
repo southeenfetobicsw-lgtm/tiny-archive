@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_ink">
+
+    <ImageView
+        android:id="@+id/imgSplashBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash" />
+
+    <View
+        android:id="@+id/viewSplashScrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_splash_scrim" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/space_xxl"
+        android:paddingTop="@dimen/status_pad"
+        android:paddingEnd="@dimen/space_xxl"
+        android:paddingBottom="@dimen/space_xl">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSplashArt"
+            android:layout_width="@dimen/splash_card"
+            android:layout_height="@dimen/splash_card"
+            app:cardBackgroundColor="@color/card_tint_splash"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtSplashTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:strokeColor="@color/card_stroke_splash"
+            app:strokeWidth="@dimen/hairline">
+
+            <ImageView
+                android:id="@+id/imgSplashArt"
+                android:layout_width="@dimen/splash_art"
+                android:layout_height="@dimen/splash_art"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cd_splash_art"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sprite_drawer" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtSplashTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xxl"
+            android:gravity="center"
+            android:text="@string/splash_title"
+            android:textAppearance="@style/TextAppearance.App.Hero.Splash"
+            app:layout_constraintBottom_toTopOf="@+id/viewSplashRule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardSplashArt" />
+
+        <View
+            android:id="@+id/viewSplashRule"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/hairline"
+            android:layout_marginTop="@dimen/space_m"
+            android:background="@drawable/bg_hairline_warm"
+            app:layout_constraintBottom_toTopOf="@+id/txtSplashSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSplashTitle" />
+
+        <TextView
+            android:id="@+id/txtSplashSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:gravity="center"
+            android:text="@string/splash_subtitle"
+            android:textAppearance="@style/TextAppearance.App.Overline"
+            android:textColor="@color/splash_subtitle"
+            app:layout_constraintBottom_toTopOf="@+id/progressSplash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSplashRule" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressSplash"
+            android:layout_width="@dimen/progress_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/cd_loading"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toTopOf="@+id/txtSplashPhase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSplashSubtitle"
+            style="@style/Widget.App.Progress" />
+
+        <TextView
+            android:id="@+id/txtSplashPhase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:accessibilityLiveRegion="polite"
+            android:gravity="center"
+            android:letterSpacing="0.18"
+            android:text="@string/splash_loading"
+            android:textAppearance="@style/TextAppearance.App.Overline"
+            android:textColor="@color/splash_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressSplash" />
+
+        <TextView
+            android:id="@+id/txtSplashFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_s"
+            android:text="@string/splash_footer"
+            android:textAppearance="@style/TextAppearance.App.Overline"
+            android:textColor="@color/splash_footer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

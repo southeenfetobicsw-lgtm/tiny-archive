@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rowCompactCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_xs"
+    android:layout_marginBottom="@dimen/space_xs"
+    android:minHeight="@dimen/row_min_height_compact"
+    app:cardBackgroundColor="@color/paper_raised"
+    app:cardCornerRadius="@dimen/radius_card"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/stroke_soft"
+    app:strokeWidth="@dimen/hairline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/row_min_height_compact"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_m"
+        android:paddingTop="@dimen/space_s"
+        android:paddingEnd="@dimen/space_m"
+        android:paddingBottom="@dimen/space_s">
+
+        <View
+            android:id="@+id/rowCompactAccent"
+            android:layout_width="@dimen/accent_bar"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_accent_bar" />
+
+        <FrameLayout
+            android:id="@+id/rowCompactTile"
+            android:layout_width="@dimen/sprite_tile_compact"
+            android:layout_height="@dimen/sprite_tile_compact"
+            android:layout_marginStart="@dimen/space_m"
+            android:background="@drawable/bg_sprite_tile">
+
+            <ImageView
+                android:id="@+id/rowCompactSprite"
+                android:layout_width="@dimen/sprite_row_compact"
+                android:layout_height="@dimen/sprite_row_compact"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cd_item_sprite"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sprite_vinyl" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_m"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rowCompactTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.App.Body"
+                android:textColor="@color/ink_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rowCompactMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.App.Meta" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

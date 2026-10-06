@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TinyArchive" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/sage_primary</item>
+        <item name="colorOnPrimary">@color/ink_inverse</item>
+        <item name="colorPrimaryContainer">@color/paper_sunken</item>
+        <item name="colorOnPrimaryContainer">@color/sage_deep</item>
+        <item name="colorSecondary">@color/terracotta_accent</item>
+        <item name="colorOnSecondary">@color/ink_on_accent</item>
+        <item name="colorSurface">@color/paper_raised</item>
+        <item name="colorOnSurface">@color/ink_primary</item>
+        <item name="colorSurfaceVariant">@color/paper_sunken</item>
+        <item name="colorOnSurfaceVariant">@color/ink_secondary</item>
+        <item name="colorOutline">@color/sage_muted</item>
+        <item name="colorOutlineVariant">@color/rule_line</item>
+        <item name="colorError">@color/clay_danger</item>
+        <item name="colorOnError">@color/ink_inverse</item>
+        <item name="android:colorBackground">@color/paper_base</item>
+        <item name="android:windowBackground">@drawable/window_launch</item>
+        <item name="android:statusBarColor">@color/splash_ink</item>
+        <item name="android:navigationBarColor">@color/splash_ink</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/ink_primary</item>
+        <item name="android:textColorSecondary">@color/ink_secondary</item>
+        <item name="android:textColorHint">@color/ink_tertiary</item>
+    </style>
+</resources>

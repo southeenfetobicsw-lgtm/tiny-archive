@@ -1,0 +1,59 @@
+{
+  "assets": [
+    {
+      "name": "icon_1024",
+      "type": "icon",
+      "prompt": "App icon, one single glossy 3D wooden card-catalog drawer front with a brass pull handle, centered, warm cream radial gradient background, crisp, no text"
+    },
+    {
+      "name": "bg_splash",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile background, dark muted olive and deep warm grey archival paper texture, soft vignette, cinematic, no text, no UI elements"
+    },
+    {
+      "name": "bg_menu",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile background, warm cream archival paper with faint sage grid lines and subtle fiber texture, soft top light, no text, no UI elements"
+    },
+    {
+      "name": "bg_archive",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile background, soft blurred warm beige linen catalog surface, very low contrast for UI overlay, no text, no UI elements"
+    },
+    {
+      "name": "sprite_drawer",
+      "type": "sprite",
+      "prompt": "One single wooden card-catalog drawer, slightly open, brass label frame, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_book",
+      "type": "sprite",
+      "prompt": "One single closed hardcover book with a cloth spine, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_vinyl",
+      "type": "sprite",
+      "prompt": "One single vinyl record with a cream centre label, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_coin",
+      "type": "sprite",
+      "prompt": "One single aged silver coin, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_postcard",
+      "type": "sprite",
+      "prompt": "One single blank vintage postcard with a stamp corner, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_botanical",
+      "type": "sprite",
+      "prompt": "One single pressed fern leaf, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_stamp",
+      "type": "sprite",
+      "prompt": "One single brass archival stamp press, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    }
+  ]
+}

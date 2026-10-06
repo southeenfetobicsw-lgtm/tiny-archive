@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.App.Hero" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">@dimen/text_hero</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/ink_primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="TextAppearance.App.Hero.Splash">
+        <item name="android:textSize">@dimen/text_hero_splash</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="android:textColor">@color/ink_inverse</item>
+    </style>
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">@color/ink_primary</item>
+    </style>
+    <style name="TextAppearance.App.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ink_primary</item>
+    </style>
+    <style name="TextAppearance.App.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/ink_secondary</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+    <style name="TextAppearance.App.Meta" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/text_meta</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ink_tertiary</item>
+    </style>
+    <style name="TextAppearance.App.Overline" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">@dimen/text_overline</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.22</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ink_tertiary</item>
+    </style>
+    <style name="TextAppearance.App.StatValue" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/text_stat</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/sage_primary</item>
+    </style>
+
+    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/cta_height</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Title</item>
+        <item name="android:textColor">@color/button_primary_text</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="backgroundTint">@color/button_primary_fill</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="android:elevation">@dimen/elevation_button</item>
+        <item name="rippleColor">@color/ripple_light</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/paper_edge</item>
+        <item name="iconPadding">@dimen/space_m</item>
+    </style>
+    <style name="Widget.App.Button.Accent" parent="Widget.App.Button.Primary">
+        <item name="android:minHeight">@dimen/cta_height_compact</item>
+        <item name="android:textColor">@color/ink_on_accent</item>
+        <item name="backgroundTint">@color/terracotta_accent</item>
+        <item name="iconTint">@color/ink_on_accent</item>
+    </style>
+    <style name="Widget.App.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/cta_height_secondary</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Meta</item>
+        <item name="android:textColor">@color/sage_primary</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="strokeColor">@color/sage_muted</item>
+        <item name="strokeWidth">@dimen/hairline</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="rippleColor">@color/ripple_warm</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/sage_primary</item>
+    </style>
+    <style name="Widget.App.Button.Quiet" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">@dimen/touch_min</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Meta</item>
+        <item name="android:textColor">@color/sage_primary</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="rippleColor">@color/ripple_warm</item>
+    </style>
+    <style name="Widget.App.Button.Danger" parent="Widget.App.Button.Quiet">
+        <item name="android:textColor">@color/clay_danger</item>
+    </style>
+    <style name="Widget.App.Button.IconOnly" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minWidth">@dimen/touch_min</item>
+        <item name="android:minHeight">@dimen/touch_min</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconTint">@color/sage_primary</item>
+        <item name="rippleColor">@color/ripple_warm</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+    </style>
+    <style name="Widget.App.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+        <item name="cardBackgroundColor">@color/paper_raised</item>
+        <item name="strokeColor">@color/stroke_soft</item>
+        <item name="strokeWidth">@dimen/hairline</item>
+        <item name="cardElevation">@dimen/elevation_card</item>
+    </style>
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="android:textAppearance">@style/TextAppearance.App.Meta</item>
+        <item name="chipMinHeight">@dimen/chip_height</item>
+        <item name="chipCornerRadius">@dimen/radius_chip</item>
+        <item name="chipStrokeWidth">@dimen/hairline</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+        <item name="rippleColor">@color/ripple_warm</item>
+    </style>
+    <style name="Widget.App.TextField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/sage_muted</item>
+        <item name="boxStrokeWidth">@dimen/hairline</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="hintTextColor">@color/ink_tertiary</item>
+        <item name="startIconTint">@color/sage_primary</item>
+        <item name="endIconTint">@color/ink_tertiary</item>
+    </style>
+    <style name="Widget.App.Progress" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/terracotta_accent</item>
+        <item name="trackColor">@color/track_splash</item>
+        <item name="trackThickness">@dimen/progress_thickness</item>
+        <item name="trackCornerRadius">2dp</item>
+    </style>
+</resources>

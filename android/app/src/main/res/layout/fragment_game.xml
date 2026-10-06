@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper_base">
+
+    <ImageView
+        android:id="@+id/imgGameBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_archive" />
+
+    <View
+        android:id="@+id/viewGameWash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_menu_wash" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerGame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_block"
+            android:background="@drawable/bg_header"
+            android:paddingTop="@dimen/status_pad">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameBack"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:layout_marginStart="@dimen/space_m"
+                android:contentDescription="@string/cd_back"
+                app:icon="@drawable/ic_arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/Widget.App.Button.IconOnly" />
+
+            <TextView
+                android:id="@+id/txtGameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_title"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                app:layout_constraintBottom_toTopOf="@+id/txtGameCount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txtGameCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:accessibilityLiveRegion="polite"
+                android:textAppearance="@style/TextAppearance.App.Overline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtGameTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameAdd"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:layout_marginEnd="@dimen/space_m"
+                android:contentDescription="@string/cd_add_item"
+                app:icon="@drawable/ic_plus"
+                app:iconTint="@color/terracotta_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/Widget.App.Button.IconOnly" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/gutter"
+            android:layout_marginTop="@dimen/space_m"
+            android:layout_marginEnd="@dimen/gutter"
+            android:hint="@string/search_hint"
+            app:endIconContentDescription="@string/cd_clear_search"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_search"
+            style="@style/Widget.App.TextField">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.App.Body" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.tinyarchive.app.core.ui.CategoryChipGroupView
+            android:id="@+id/chipsCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m" />
+
+        <FrameLayout
+            android:id="@+id/areaList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/space_s"
+                android:paddingBottom="@dimen/space_l"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/groupEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/gutter"
+                android:paddingEnd="@dimen/gutter"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgEmptyArt"
+                    android:layout_width="@dimen/empty_art"
+                    android:layout_height="@dimen/empty_art"
+                    android:alpha="0.5"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sprite_drawer" />
+
+                <TextView
+                    android:id="@+id/txtEmptyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/empty_title"
+                    android:textAppearance="@style/TextAppearance.App.Title"
+                    android:textColor="@color/sage_primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtEmptyBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:gravity="center"
+                    android:text="@string/empty_body"
+                    android:textAppearance="@style/TextAppearance.App.Body"
+                    android:textColor="@color/ink_tertiary"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEmptyAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/cta_height_secondary"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/empty_action"
+                    app:icon="@drawable/ic_plus"
+                    style="@style/Widget.App.Button.Secondary" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="@dimen/gutter"
+                android:layout_marginTop="@dimen/space_s"
+                android:layout_marginEnd="@dimen/gutter"
+                android:accessibilityLiveRegion="assertive"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/error_banner_fill"
+                app:cardCornerRadius="@dimen/radius_card"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/clay_danger"
+                app:strokeWidth="@dimen/hairline">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_l">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/error_title"
+                        android:textAppearance="@style/TextAppearance.App.Title"
+                        android:textColor="@color/clay_danger"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="@string/error_body"
+                        android:textAppearance="@style/TextAppearance.App.Body"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnErrorRestore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/cta_height_secondary"
+                        android:layout_marginTop="@dimen/space_m"
+                        android:text="@string/error_action"
+                        style="@style/Widget.App.Button.Danger" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/panelControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_controls_panel"
+            android:elevation="@dimen/elevation_panel"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_xl"
+            android:paddingTop="@dimen/space_l"
+            android:paddingEnd="@dimen/space_xl"
+            android:paddingBottom="@dimen/space_l">
+
+            <LinearLayout
+                android:id="@+id/rowGameStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.tinyarchive.app.core.ui.StatCardView
+                    android:id="@+id/statShowing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/sage_primary"
+                    app:statCompact="true"
+                    app:statLabel="@string/stat_showing" />
+
+                <com.tinyarchive.app.core.ui.StatCardView
+                    android:id="@+id/statTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_xs"
+                    android:layout_marginEnd="@dimen/space_xs"
+                    android:layout_weight="1"
+                    app:statAccent="@color/terracotta_accent"
+                    app:statCompact="true"
+                    app:statLabel="@string/stat_total" />
+
+                <com.tinyarchive.app.core.ui.StatCardView
+                    android:id="@+id/statWithNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/moss_success"
+                    app:statCompact="true"
+                    app:statLabel="@string/stat_with_notes" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameReview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cta_height_compact"
+                android:layout_marginTop="@dimen/space_l"
+                android:text="@string/game_cta"
+                app:icon="@drawable/ic_summary"
+                style="@style/Widget.App.Button.Accent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameCategories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/touch_min"
+                android:layout_marginTop="@dimen/space_s"
+                android:text="@string/game_categories"
+                style="@style/Widget.App.Button.Quiet" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

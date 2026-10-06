@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rowCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/gutter"
+    android:layout_marginTop="@dimen/space_s"
+    android:layout_marginEnd="@dimen/gutter"
+    android:layout_marginBottom="@dimen/space_s"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="@dimen/row_min_height"
+    app:cardBackgroundColor="@color/paper_raised"
+    app:cardCornerRadius="@dimen/radius_card"
+    app:cardElevation="@dimen/elevation_card"
+    app:rippleColor="@color/ripple_warm"
+    app:strokeColor="@color/stroke_soft"
+    app:strokeWidth="@dimen/hairline">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/row_min_height"
+        android:paddingStart="@dimen/space_m"
+        android:paddingTop="@dimen/space_m"
+        android:paddingEnd="@dimen/space_m"
+        android:paddingBottom="@dimen/space_m">
+
+        <View
+            android:id="@+id/rowAccentBar"
+            android:layout_width="@dimen/accent_bar"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_accent_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/rowSpriteTile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rowSpriteTile" />
+
+        <View
+            android:id="@+id/rowSpriteTile"
+            android:layout_width="@dimen/sprite_tile"
+            android:layout_height="@dimen/sprite_tile"
+            android:layout_marginStart="@dimen/space_m"
+            android:background="@drawable/bg_sprite_tile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rowAccentBar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rowSprite"
+            android:layout_width="@dimen/sprite_row"
+            android:layout_height="@dimen/sprite_row"
+            android:contentDescription="@string/cd_item_sprite"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_book"
+            app:layout_constraintBottom_toBottomOf="@+id/rowSpriteTile"
+            app:layout_constraintEnd_toEndOf="@+id/rowSpriteTile"
+            app:layout_constraintStart_toStartOf="@+id/rowSpriteTile"
+            app:layout_constraintTop_toTopOf="@+id/rowSpriteTile" />
+
+        <TextView
+            android:id="@+id/rowTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_m"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            android:textColor="@color/ink_primary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/rowChevron"
+            app:layout_constraintStart_toEndOf="@+id/rowSpriteTile"
+            app:layout_constraintTop_toTopOf="@+id/rowSpriteTile" />
+
+        <TextView
+            android:id="@+id/rowMeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.App.Meta"
+            app:layout_constraintEnd_toStartOf="@+id/rowChevron"
+            app:layout_constraintStart_toStartOf="@+id/rowTitle"
+            app:layout_constraintTop_toBottomOf="@+id/rowTitle" />
+
+        <TextView
+            android:id="@+id/rowNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/rowChevron"
+            app:layout_constraintStart_toStartOf="@+id/rowTitle"
+            app:layout_constraintTop_toBottomOf="@+id/rowMeta" />
+
+        <ImageView
+            android:id="@+id/rowChevron"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="@color/sage_muted" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

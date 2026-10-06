@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper_base">
+
+    <ImageView
+        android:id="@+id/imgMenuBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_menu" />
+
+    <View
+        android:id="@+id/viewMenuWash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_menu_wash" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/gutter"
+        android:paddingTop="@dimen/status_pad"
+        android:paddingEnd="@dimen/gutter"
+        android:paddingBottom="@dimen/space_xl">
+
+        <com.tinyarchive.app.core.ui.SectionHeaderView
+            android:id="@+id/headerMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sectionOverline="@string/menu_overline" />
+
+        <TextView
+            android:id="@+id/txtHeroTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            android:text="@string/menu_hero_top"
+            android:textAppearance="@style/TextAppearance.App.Hero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerMenu" />
+
+        <TextView
+            android:id="@+id/txtHeroBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_hero_bottom"
+            android:textAppearance="@style/TextAppearance.App.Hero"
+            android:textColor="@color/sage_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeroTop" />
+
+        <TextView
+            android:id="@+id/txtMenuTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:maxWidth="300dp"
+            android:text="@string/menu_tagline"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeroBottom" />
+
+        <ImageView
+            android:id="@+id/imgMenuArt"
+            android:layout_width="@dimen/hero_art_large"
+            android:layout_height="@dimen/hero_art_large"
+            android:layout_marginTop="@dimen/space_l"
+            android:layout_marginBottom="@dimen/space_l"
+            android:alpha="0.95"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/rowMenuStats"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMenuTagline"
+            android:src="@drawable/sprite_drawer" />
+
+        <LinearLayout
+            android:id="@+id/rowMenuStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_l"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnMenuStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.tinyarchive.app.core.ui.StatCardView
+                android:id="@+id/statMenuItems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_s"
+                android:layout_weight="1"
+                app:statAccent="@color/sage_primary"
+                app:statLabel="@string/stat_items" />
+
+            <com.tinyarchive.app.core.ui.StatCardView
+                android:id="@+id/statMenuCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_xs"
+                android:layout_marginEnd="@dimen/space_xs"
+                android:layout_weight="1"
+                app:statAccent="@color/terracotta_accent"
+                app:statLabel="@string/stat_categories" />
+
+            <com.tinyarchive.app.core.ui.StatCardView
+                android:id="@+id/statMenuNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_s"
+                android:layout_weight="1"
+                app:statAccent="@color/moss_success"
+                app:statLabel="@string/stat_notes" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenuStart"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cta_height"
+            android:layout_marginBottom="@dimen/space_xl"
+            android:text="@string/menu_cta"
+            app:icon="@drawable/ic_drawer_open"
+            app:layout_constraintBottom_toTopOf="@+id/rowMenuSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/Widget.App.Button.Primary" />
+
+        <LinearLayout
+            android:id="@+id/rowMenuSecondary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuCategories"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/cta_height_secondary"
+                android:layout_marginEnd="@dimen/space_s"
+                android:layout_weight="1"
+                android:text="@string/menu_categories"
+                app:icon="@drawable/ic_tag"
+                style="@style/Widget.App.Button.Secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuSettings"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/cta_height_secondary"
+                android:layout_marginStart="@dimen/space_s"
+                android:layout_weight="1"
+                android:text="@string/menu_settings"
+                app:icon="@drawable/ic_summary"
+                style="@style/Widget.App.Button.Secondary" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
